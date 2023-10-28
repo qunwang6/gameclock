@@ -116,15 +116,7 @@ clocks.forEach((clock, index) => {
 });
 
 pause.addEventListener('click', () => pauseAll());
-reset.addEventListener('click', () => {
-  pauseAll();
-  if (window.confirm('Are you sure you want to reset the timers?')) {
-    clocks.forEach((clock) => {
-      clock.elapsedSoFar = 0;
-      clock.lastPaused = -1;
-    });
-  }
-});
+
 
 /**
  * Renders the current time on the clock
